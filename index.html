@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE SYSTEM v1.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="scanlines"></div>
+
+<main class="terminal">
+
+    <!-- =========================
+         開場
+    ========================== -->
+    <section id="boot-screen" class="screen active">
+
+        <div class="logo">
+            <div>♡</div>
+            <h1>LOVE LETTER</h1>
+            <span>VERSION 1.0</span>
+        </div>
+
+        <div class="boot-log" id="boot-log"></div>
+
+        <button id="start-btn" class="terminal-btn hidden">
+            [ ENTER ]
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         首頁
+    ========================== -->
+    <section id="home-screen" class="screen">
+
+        <div class="top-bar">
+            <span>LOVE_LETTER.exe</span>
+            <span>STATUS: <b>ONLINE</b></span>
+        </div>
+
+        <div class="profile-card">
+
+            <div class="avatar">👸</div>
+
+            <div class="profile-info">
+                <p>PLAYER</p>
+                <h2 id="my-name">最可愛寶貝</h2>
+
+                <div class="stat">
+                    <span>LOVE</span>
+                    <div class="bar">
+                        <div class="fill love-fill"></div>
+                    </div>
+                    <span>∞</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="relationship-status">
+
+            <p class="small">CURRENT QUEST</p>
+
+            <h2>❤️ 我們的一個月紀念日</h2>
+
+            <p>
+                System detected a special event.
+            </p>
+
+            <div class="counter">
+                <span id="days">30</span>
+                <small>DAYS TOGETHER</small>
+            </div>
+
+        </div>
+
+
+        <div class="menu">
+
+            <button onclick="showScreen('timeline-screen')">
+                📜 OUR TIMELINE
+            </button>
+
+            <button onclick="showScreen('achievement-screen')">
+                🏆 ACHIEVEMENTS
+            </button>
+
+            <button onclick="showScreen('message-screen')">
+                💌 MESSAGE
+            </button>
+
+            <button onclick="showScreen('secret-screen')">
+                🔒 SECRET
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         Timeline
+    ========================== -->
+    <section id="timeline-screen" class="screen">
+
+        <div class="page-title">
+            <span>DATABASE / MEMORIES</span>
+            <h2>📜 OUR TIMELINE</h2>
+        </div>
+
+        <div id="timeline-container"></div>
+
+        <button class="back-btn" onclick="showScreen('home-screen')">
+            ← BACK
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         成就
+    ========================== -->
+    <section id="achievement-screen" class="screen">
+
+        <div class="page-title">
+            <span>EXPERIENCE DATA</span>
+            <h2>🏆 ACHIEVEMENTS</h2>
+        </div>
+
+        <div id="achievement-container"></div>
+
+        <button class="back-btn" onclick="showScreen('home-screen')">
+            ← BACK
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         情書
+    ========================== -->
+    <section id="message-screen" class="screen">
+
+        <div class="page-title">
+            <span>MESSAGE DATABASE</span>
+            <h2>💌 MESSAGE FOR YOU</h2>
+        </div>
+
+        <div class="message-box">
+
+            <p id="typing-text"></p>
+
+        </div>
+
+        <button class="back-btn" onclick="showScreen('home-screen')">
+            ← BACK
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         Secret
+    ========================== -->
+    <section id="secret-screen" class="screen">
+
+        <div class="page-title">
+            <span>RESTRICTED AREA</span>
+            <h2>🔒 SECRET FILE</h2>
+        </div>
+
+        <div id="secret-lock">
+
+            <p>
+                This file is protected.
+            </p>
+
+            <p>
+                Please enter password.
+            </p>
+
+            <input
+                id="password-input"
+                type="password"
+                placeholder="password..."
+            >
+
+            <button onclick="unlockSecret()">
+                UNLOCK
+            </button>
+
+            <p id="password-result"></p>
+
+        </div>
+
+        <div id="secret-content" class="hidden">
+
+            <h2>🎁 SECRET UNLOCKED</h2>
+
+            <p>
+                恭喜妳找到這裡。
+            </p>
+
+            <p>
+                先把我們第一個月的回憶記錄下來。
+                未來的經歷慢慢添加進來。
+            </p>
+
+            <img src="assets/IMG_6807.jpg" alt="Secret Photo" class="secret-img" style="max-width: 150px; width: 50%; height: auto; margin: 15px auto; display: block; border: 1px solid var(--pink); border-radius: 6px; box-shadow: 0 0 15px rgba(255, 123, 172, 0.4);">
+
+            <p class="big-heart">
+                ❤️
+            </p>
+
+            <p>
+                Happy 1 Month.
+            </p>
+
+        </div>
+
+        <button class="back-btn" onclick="showScreen('home-screen')">
+            ← BACK
+        </button>
+
+    </section>
+
+
+    <footer>
+        LOVE LETTER v1.0 · Made with ❤️ and probably too much code.
+    </footer>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
