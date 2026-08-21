@@ -215,6 +215,74 @@
 
             <img src="assets/IMG_6807.jpg" alt="Secret Photo" class="secret-img" style="max-width: 150px; width: 50%; height: auto; margin: 15px auto; display: block; border: 1px solid var(--pink); border-radius: 6px; box-shadow: 0 0 15px rgba(255, 123, 172, 0.4);">
 
+            <!-- =========================================================
+                 🎁 專屬兌換券小禮物（圖案預覽 + 下載到手機）
+                 💡 兌換券文字可直接在 script.js 的 couple.coupon 修改
+            ========================================================= -->
+            <div class="gift-section">
+                <div class="gift-title">
+                    <span>LIMITED SPECIAL GIFT</span>
+                    <h3>🎫 女神專屬兌換券</h3>
+                </div>
+
+                <!-- 兌換券實體風格圖案預覽 -->
+                <div class="coupon-card" id="coupon-card">
+                    <div class="coupon-notch top-notch"></div>
+                    <div class="coupon-notch bottom-notch"></div>
+                    <div class="coupon-inner">
+                        <div class="coupon-badge">★ LOVE COUPON ★</div>
+                        <h3 id="coupon-display-title" class="coupon-title">願望無條件兌換券</h3>
+                        <p id="coupon-display-subtitle" class="coupon-subtitle">LIMITED EDITION · 終身有效</p>
+                        <div class="coupon-divider"><span>❤️</span></div>
+                        <div id="coupon-display-content" class="coupon-content">
+                            憑此券可要求男朋友無條件為妳實現任何一個願望！<br>
+                            （例：按摩乙次 / 大餐乙頓 / 陪逛街一整天 / 無條件原諒一次）
+                        </div>
+                        <div class="coupon-details">
+                            <div class="coupon-detail-item">
+                                <span class="label">獲獎對象</span>
+                                <span id="coupon-display-receiver" class="val">最可愛寶貝</span>
+                            </div>
+                            <div class="coupon-detail-item">
+                                <span class="label">承諾發行</span>
+                                <span id="coupon-display-issuer" class="val">建安</span>
+                            </div>
+                            <div class="coupon-detail-item">
+                                <span class="label">有效期限</span>
+                                <span id="coupon-display-expire" class="val">終身有效 ♾️</span>
+                            </div>
+                        </div>
+                        <p id="coupon-display-note" class="coupon-note">＊本券隨叫隨到，最終解釋權歸公主所有</p>
+                        <div class="coupon-barcode-wrap">
+                            <div class="barcode-lines"></div>
+                            <div id="coupon-display-code" class="barcode-code">VAL-2026-0821-LOVE-001</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 下載按鈕 -->
+                <button class="download-coupon-btn" onclick="downloadCoupon()">
+                    📥 下載兌換券
+                </button>
+            </div>
+
+            <!-- 手機端儲存圖片 Modal 彈窗 -->
+            <div id="coupon-modal" class="coupon-modal hidden">
+                <div class="coupon-modal-content">
+                    <span class="coupon-modal-close" onclick="closeCouponModal()">&times;</span>
+                    <h3>✨ 兌換券圖片已產生！</h3>
+                    <p class="modal-tip">📱 點擊下方按鈕儲存，或長按圖片選擇「儲存至相簿」</p>
+                    <div class="modal-image-wrapper">
+                        <img id="coupon-modal-img" src="" alt="兌換券圖片預覽">
+                    </div>
+                    <div class="modal-actions">
+                        <a id="coupon-modal-download-link" href="#" download="love_coupon.png" class="modal-download-btn">
+                            ⬇️ 下載圖片 (Save Image)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <p class="big-heart">
                 ❤️
             </p>

@@ -393,3 +393,283 @@ footer {
         padding: 20px;
     }
 }
+
+/* =========================================================
+   🎁 專屬兌換券小禮物樣式 (Coupon Gift Card)
+========================================================= */
+
+.gift-section {
+    margin: 35px auto;
+    padding: 25px 20px;
+    border: 1px dashed var(--pink);
+    border-radius: 14px;
+    background: rgba(16, 21, 18, 0.85);
+    box-shadow: 0 0 25px rgba(255, 123, 172, 0.15);
+    max-width: 600px;
+}
+
+.gift-title {
+    margin-bottom: 20px;
+}
+
+.gift-title span {
+    color: var(--pink);
+    font-size: 11px;
+    letter-spacing: 3px;
+    display: block;
+}
+
+.gift-title h3 {
+    margin: 5px 0 0 0;
+    color: var(--text);
+    font-size: 18px;
+}
+
+.coupon-card {
+    position: relative;
+    max-width: 520px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, #121915 0%, #1c1218 100%);
+    border: 2px solid var(--pink);
+    border-radius: 16px;
+    padding: 30px 22px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 123, 172, 0.12);
+}
+
+/* 兩側票券切角 Ticket Notch 效果 */
+.coupon-notch {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: var(--bg);
+    border: 2px solid var(--pink);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.top-notch {
+    left: -13px;
+}
+
+.bottom-notch {
+    right: -13px;
+}
+
+.coupon-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--bg);
+    background: var(--pink);
+    font-weight: bold;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 10px rgba(255, 123, 172, 0.5);
+}
+
+.coupon-title {
+    font-size: 22px;
+    color: #ffffff;
+    margin: 5px 0 6px;
+    text-shadow: 0 0 12px rgba(255, 123, 172, 0.6);
+    letter-spacing: 1px;
+}
+
+.coupon-subtitle {
+    font-size: 11px;
+    color: var(--pink);
+    margin: 0 0 15px;
+    letter-spacing: 1.5px;
+}
+
+.coupon-divider {
+    position: relative;
+    border-bottom: 1px dashed var(--green-dark);
+    margin: 15px 0 20px;
+    text-align: center;
+}
+
+.coupon-divider span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #141715;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.coupon-content {
+    background: rgba(99, 255, 154, 0.05);
+    border: 1px dashed var(--green-dark);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.7;
+    white-space: pre-line;
+}
+
+.coupon-details {
+    display: flex;
+    justify-content: space-around;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.coupon-detail-item {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 123, 172, 0.25);
+    font-size: 11px;
+    flex: 1;
+}
+
+.coupon-detail-item .label {
+    color: var(--gray);
+    display: block;
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+.coupon-detail-item .val {
+    color: var(--green);
+    font-weight: bold;
+}
+
+.coupon-note {
+    font-size: 10px;
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.coupon-barcode-wrap {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--green-dark);
+}
+
+.barcode-lines {
+    height: 32px;
+    width: 200px;
+    margin: 0 auto 6px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--green) 0px,
+        var(--green) 2px,
+        transparent 2px,
+        transparent 4px,
+        var(--green) 4px,
+        var(--green) 7px,
+        transparent 7px,
+        transparent 9px
+    );
+    opacity: 0.85;
+}
+
+.barcode-code {
+    font-size: 10px;
+    color: var(--gray);
+    letter-spacing: 3px;
+}
+
+/* 下載按鈕 */
+.download-coupon-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--pink) 0%, #e0558b 100%);
+    color: #ffffff !important;
+    border: none !important;
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 18px rgba(255, 123, 172, 0.45);
+    transition: all 0.25s ease;
+}
+
+.download-coupon-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(255, 123, 172, 0.7);
+    background: linear-gradient(135deg, #ff8eb8 0%, var(--pink) 100%);
+    color: #ffffff !important;
+}
+
+/* Modal 彈窗 (方便手機端長按儲存圖片) */
+.coupon-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(6px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.coupon-modal-content {
+    position: relative;
+    background: var(--panel);
+    border: 2px solid var(--pink);
+    border-radius: 16px;
+    padding: 25px 20px;
+    max-width: 520px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: center;
+    box-shadow: 0 0 35px rgba(255, 123, 172, 0.4);
+}
+
+.coupon-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-size: 28px;
+    color: var(--pink);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.coupon-modal-close:hover {
+    color: #fff;
+}
+
+.modal-tip {
+    font-size: 12px;
+    color: var(--green);
+    margin: 8px 0 16px;
+    line-height: 1.6;
+}
+
+.modal-image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--pink);
+    box-shadow: 0 0 15px rgba(255, 123, 172, 0.3);
+}
+
+.modal-download-btn {
+    display: inline-block;
+    margin-top: 18px;
+    background: var(--green);
+    color: var(--bg);
+    padding: 12px 26px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 13px;
+    box-shadow: 0 0 15px rgba(99, 255, 154, 0.4);
+    transition: transform 0.2s;
+}
+
+.modal-download-btn:hover {
+    transform: scale(1.03);
+}
