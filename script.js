@@ -196,6 +196,18 @@ Happy 1 Month ❤️
             unlocked: false,
         },
         {
+            icon: "🤬",
+            title: "吵架",
+            description: "第一次吵架",
+            unlocked: false,
+        },
+        {
+            icon: "🤝",
+            title: "和好",
+            description: "吵架後的和好親親",
+            unlocked: false,
+        },
+        {
             icon: "🚠",
             title: "出遊",
             description: "一起去外宿冒險！",
