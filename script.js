@@ -7,7 +7,7 @@ const couple = {
 
     partnerName: "建安",
 
-    daysTogether: 30,
+    daysTogether: "30+",
 
     // Secret password
     secretPassword: "0724",
@@ -34,12 +34,12 @@ const couple = {
 一個月好像不是很長，
 但這段時間裡面，
 有好多原本很普通的日子，
-因為多了一個妳，變得不太一樣。
+因為有了妳，變得不太一樣。
 
 我很喜歡跟妳聊天的放鬆時光、
 跟妳一起吃東西變胖肚肚、
 一起出去玩到迷路，
-也很喜歡我們之間那些只有我們懂的小默契。
+也很喜歡我們之間的小默契。
 
 這是我們很多很多個月的第一個，
 未來可能會有吵架的時候，但只要妳願意，
@@ -48,18 +48,18 @@ const couple = {
 
 相信我們不會只有「我愛你」時的浪漫，
 而是在日子變得平凡、生活有了柴米油鹽之後，
-依然願意選擇繼續跟你在一起。
+依然願意選擇繼續跟彼此在一起。
 或許不一定每次都有完美的回應或答案，
-但彼此願意一同面對、一同成長，
+就讓我們一同面對、一同成長，
 一起把平凡的日子過成屬於我們的故事。
 
 
-雖然我可能不是最會準備驚喜的人，
+我可能不是最會準備驚喜的人，
 但還是想展現一下直男式浪漫 <3
 
 Happy 1 Month ❤️
 
-最愛妳的比比
+最愛妳的比比&屁屁&陳公子&大同車銀優&陳同學
 `,
 
     timeline: [
@@ -80,7 +80,7 @@ Happy 1 Month ❤️
         },
         {
             date: "DAY 19",
-            title: "訊息裡的「愛你」❤️",
+            title: "「愛你」❤️",
             image: "assets/S__303071243.jpg",
         },
 
@@ -109,6 +109,11 @@ Happy 1 Month ❤️
             date: "DAY 27-2",
             title: "好美的代客服務",
             image: "assets/IMG_6810.jpg",
+        },
+        {
+            date: "DAY 30",
+            title: "Sweet & Sweet",
+            image: "assets/IMG_6819.jpg",
         },
         {
             date: "TODAY",
@@ -161,10 +166,28 @@ Happy 1 Month ❤️
             unlocked: true,
         },
         {
+            icon: "🕊️",
+            title: "灰鴿",
+            description: "一起呷好好粗a灰鴿！",
+            unlocked: true,
+        },
+        {
+            icon: "💰",
+            title: "中獎",
+            description: "刮超過1000！",
+            unlocked: true,
+        },
+        {
+            icon: "👨🏻",
+            title: "爸爸",
+            description: "講電話被突襲",
+            unlocked: true,
+        },
+        {
             icon: "⭐️",
             title: "看星星",
             description: "一起去天文館",
-            unlocked: true,
+            unlocked: false,
         },
         {
             icon: "🏝️",
