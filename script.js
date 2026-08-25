@@ -436,6 +436,123 @@ function startTyping() {
 }
 
 /* =========================================================
+   LOVE CATCHER GAME
+========================================================= */
+
+let gameScore = 0;
+let gameTime = 15;
+let gameInterval;
+let spawnInterval;
+
+function startGame() {
+    gameScore = 0;
+    gameTime = 15;
+
+    document.getElementById("game-score").textContent = gameScore;
+    document.getElementById("game-time").textContent = gameTime;
+
+    document.getElementById("game-start").classList.add("hidden");
+
+    document.getElementById("game-result").classList.add("hidden");
+
+    gameInterval = setInterval(() => {
+        gameTime--;
+
+        document.getElementById("game-time").textContent = gameTime;
+
+        if (gameTime <= 0) {
+            endGame();
+        }
+    }, 1000);
+
+    spawnInterval = setInterval(() => {
+        spawnHeart();
+    }, 500);
+}
+
+function spawnHeart() {
+    const area = document.getElementById("game-area");
+
+    const heart = document.createElement("div");
+
+    heart.className = "falling-heart";
+
+    // 50% 機率出現炸彈
+    heart.textContent = Math.random() < 0.3 ? "💩" : "❤️";
+
+    heart.style.left = Math.random() * 90 + "%";
+
+    heart.style.animationDuration = Math.random() * 2 + 2 + "s";
+
+    heart.onclick = () => {
+        if (heart.textContent === "❤️") {
+            gameScore++;
+        } else {
+            gameScore -= 2;
+        }
+
+        document.getElementById("game-score").textContent = gameScore;
+
+        heart.remove();
+    };
+
+    area.appendChild(heart);
+
+    setTimeout(() => {
+        if (heart.parentElement) {
+            heart.remove();
+        }
+    }, 4000);
+}
+
+function endGame() {
+    clearInterval(gameInterval);
+    clearInterval(spawnInterval);
+
+    document
+        .querySelectorAll(".falling-heart")
+        .forEach((heart) => heart.remove());
+
+    const result = document.getElementById("game-result");
+
+    let rank;
+
+    if (gameScore >= 25) {
+        rank = "明年要想新遊戲了...";
+    } else if (gameScore >= 15) {
+        rank = "遊戲天才！";
+    } else if (gameScore >= 8) {
+        rank = "哎呦 有點東西";
+    } else {
+        rank = "生氣是正常的 😘";
+    }
+
+    result.innerHTML = `
+
+        <h2>MISSION COMPLETE</h2>
+
+        <p>
+            ❤️ 得分: ${gameScore}
+        </p>
+
+        <h3>
+            ${rank}
+        </h3>
+
+        <p>
+            免費遊戲，好玩一直玩
+        </p>
+
+        <button onclick="startGame()">
+            勾勝幾敗
+        </button>
+
+    `;
+
+    result.classList.remove("hidden");
+}
+
+/* =========================================================
    Secret
 ========================================================= */
 

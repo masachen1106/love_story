@@ -85,21 +85,23 @@
         <div class="menu">
 
             <button onclick="showScreen('timeline-screen')">
-                📜 OUR TIMELINE
+                📜 點點滴滴
             </button>
 
             <button onclick="showScreen('achievement-screen')">
-                🏆 ACHIEVEMENTS
+                🏆 完成清單
             </button>
 
             <button onclick="showScreen('message-screen')">
-                💌 MESSAGE
+                💌 甜言蜜語
             </button>
 
             <button onclick="showScreen('secret-screen')">
-                🔒 SECRET
+                🔒 生人勿近
             </button>
-
+            <button onclick="showScreen('game-screen')">
+                🎮 小遊戲
+            </button>
         </div>
 
     </section>
@@ -165,6 +167,46 @@
 
     </section>
 
+    <!-- =========================
+        Love Catcher 小遊戲
+    ========================= -->
+    <section id="game-screen" class="screen">
+
+        <div class="page-title">
+            <span>MINI GAME / MODULE 01</span>
+            <h2>❤️ HEART CATCHER</h2>
+        </div>
+
+        <div class="game-info">
+            <span>SCORE: <b id="game-score">0</b></span>
+            <span>TIME: <b id="game-time">15</b></span>
+        </div>
+
+        <div id="game-area">
+
+            <div id="game-start">
+
+                <p>15秒內點到越多次愛心越高分！</p>
+
+                <p class="small">
+                    點到嗯嗯會扣分喔
+                </p>
+
+                <button onclick="startGame()">
+                    [ 開始遊戲！ ]
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="game-result" class="hidden"></div>
+
+        <button class="back-btn" onclick="showScreen('home-screen')">
+            ← BACK
+        </button>
+
+    </section>
 
     <!-- =========================
          Secret
