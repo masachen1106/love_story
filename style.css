@@ -717,6 +717,9 @@ footer {
     cursor: pointer;
     user-select: none;
 
+    /* 避免手機瀏覽器把第一次點擊當成其他手勢 */
+    touch-action: manipulation;
+
     animation: fall linear forwards;
 
     z-index: 2;

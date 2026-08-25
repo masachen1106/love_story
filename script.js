@@ -484,7 +484,10 @@ function spawnHeart() {
 
     heart.style.animationDuration = Math.random() * 2 + 2 + "s";
 
-    heart.onclick = () => {
+    heart.addEventListener("pointerdown", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
         if (heart.textContent === "❤️") {
             gameScore++;
         } else {
@@ -494,7 +497,7 @@ function spawnHeart() {
         document.getElementById("game-score").textContent = gameScore;
 
         heart.remove();
-    };
+    });
 
     area.appendChild(heart);
 
